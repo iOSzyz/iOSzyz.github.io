@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-09T03:38:32.000Z</updated>
+  <updated>2016-10-09T03:44:35.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/10/09/mdcc2016%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%88%86%E4%BA%AB/"/>
     <id>http://yoursite.com/2016/10/09/mdcc2016跨平台分享/</id>
     <published>2016-10-09T03:36:54.000Z</published>
-    <updated>2016-10-09T03:38:32.000Z</updated>
+    <updated>2016-10-09T03:44:35.000Z</updated>
     
     <content type="html"><![CDATA[<p>#移动端跨平台<br><img src="http://od0zwrx7y.bkt.clouddn.com/IMG_0500.JPG" alt=""></p>
 <h3 id="Web应用-VS-原生应用"><a href="#Web应用-VS-原生应用" class="headerlink" title="Web应用 VS 原生应用"></a>Web应用 VS 原生应用</h3><hr>
@@ -150,8 +150,9 @@
 <li>nvm 是 Node.js 的版本管理器，可以轻松安装并管理各个版本的 Node.js </li>
 <li>nvm安装node.js和npm</li>
 </ul>
-<p>###初始化项目<br>    react-native init RN_demo</p>
-<p><a href="http://www.jianshu.com/p/978c4bd3a759" target="_blank" rel="external">React Native 从入门到原理</a></p>
+<p>###初始化项目</p>
+<pre><code>react-native init RN_demo
+</code></pre><p><a href="http://www.jianshu.com/p/978c4bd3a759" target="_blank" rel="external">React Native 从入门到原理</a></p>
 <p><a href="http://awhisper.github.io/2016/07/22/Weex-ReactNative-JSPatch/" target="_blank" rel="external">Weex &amp; ReactNative &amp; JSPatch</a></p>
 <p><a href="http://www.jianshu.com/p/1809897c094c" target="_blank" rel="external">ReactNative 增量热更新思路</a></p>
 <p><a href="http://reactnative.cn/" target="_blank" rel="external">reactnative中文网</a></p>
@@ -163,58 +164,6 @@
     
       &lt;p&gt;#移动端跨平台&lt;br&gt;&lt;img src=&quot;http://od0zwrx7y.bkt.clouddn.com/IMG_0500.JPG&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h3 id=&quot;Web应用-VS-原生应用&quot;&gt;&lt;a href=&quot;#Web应用-VS-原生应用&quot; class=&quot;he
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>第一篇博客</title>
-    <link href="http://yoursite.com/2016/09/12/first/"/>
-    <id>http://yoursite.com/2016/09/12/first/</id>
-    <published>2016-09-12T15:19:38.000Z</published>
-    <updated>2016-09-13T02:45:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>#第一篇博客<br>装B之路开启<br><a href="http://www.baidu.com" target="_blank" rel="external">地址</a></p>
-<p>#第一篇博客<br>装B之路开启<br><a href="http://www.baidu.com" target="_blank" rel="external">地址</a>#第一篇博客<br>装B之路开启<br><a href="http://www.baidu.com" target="_blank" rel="external">地址</a>#第一篇博客<br>装B之路开启<br><a href="http://www.baidu.com" target="_blank" rel="external">地址</a>#第一篇博客<br>装B之路开启<br><a href="http://www.baidu.com" target="_blank" rel="external">地址</a>#第一篇博客<br>装B之路开启<br><a href="http://www.baidu.com" target="_blank" rel="external">地址</a>#第一篇博客<br>装B之路开启<br><a href="http://www.baidu.com" target="_blank" rel="external">地址</a>#第一篇博客<br>装B之路开启<br><a href="http://www.baidu.com" target="_blank" rel="external">地址</a>#第一篇博客<br>装B之路开启<br><a href="http://www.baidu.com" target="_blank" rel="external">地址</a>#第一篇博客<br>装B之路开启<br><a href="http://www.baidu.com" target="_blank" rel="external">地址</a>#第一篇博客<br>装B之路开启<br><a href="http://www.baidu.com" target="_blank" rel="external">地址</a></p>
-<p>#第一篇博客<br>装B之路开启<br><a href="http://www.baidu.com" target="_blank" rel="external">地址</a></p>
-<p>#第一篇博客<br>装B之路开启<br><a href="http://www.baidu.com" target="_blank" rel="external">地址</a></p>
-<p>#第一篇博客<br>装B之路开启<br><a href="http://www.baidu.com" target="_blank" rel="external">地址</a></p>
-<p>#第一篇博客<br>装B之路开启<br><a href="http://www.baidu.com" target="_blank" rel="external">地址</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;#第一篇博客&lt;br&gt;装B之路开启&lt;br&gt;&lt;a href=&quot;http://www.baidu.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;#第一篇博客&lt;br&gt;装B之路开启&lt;br&gt;&lt;a href=&quot;http://www.b
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2016/09/12/hello-world/"/>
-    <id>http://yoursite.com/2016/09/12/hello-world/</id>
-    <published>2016-09-12T14:41:56.000Z</published>
-    <updated>2016-09-13T02:55:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
     
     </summary>
     
