@@ -14,9 +14,9 @@
         }
         .result {
             position: absolute;
-            height: 320px;
-            width: 100%;
-            left: 0; top: 50%;
+            height: 350px;
+            width: 80%;
+            left: 200px; top: 50%;
             margin-top: -160px;
             text-align: center;
             padding: 10px;
@@ -215,7 +215,7 @@
                   return m.name + '<br/>' + m.phone; 
                 });
             localStorage.setItem('choosed', JSON.stringify(choosed));
-            var obj = data[idNumber];
+            var obj = data[idNumber-1];
             var dataObj = {"prizeName":obj.name,"prize":ret,"id":idNumber};
             var historyData = [];
             if(localStorage.getItem('prized') != null){
