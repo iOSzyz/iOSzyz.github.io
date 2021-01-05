@@ -147,10 +147,10 @@
 <div id="tools" class="tools">
      <button
         v-for="value in btns"
-        @click="onClick(value)"
+        @click="onClick(value.count)"
         class="pure-button"
-        :class="{ 'button-error': selected == value}"
-       >{{value}}</button>
+        :class="{ 'button-error': selected == value.id}"
+       >{{value.name}}</button>
     <button
        class="pure-button"
        @click="toggle"
@@ -218,8 +218,16 @@
             data: {
                 selected: 30,
                 running: false,
-                btns: [
-                    30, 10, 5, 2, 1
+                btns: [{name:"出差无忧奖5名\n小米移动电源10000毫安",count:5,id:1},
+                       {name:"纯爷们儿奖5名",count:5,id:2},
+                       {name:"汇报必备奖5名",count:5,id:3},
+                       {name:"办公无忧奖5名",count:5,id:4},
+                       {name:"冬日居家奖5名",count:5,id:5},
+                       {name:"智能安全奖5名",count:5,id:6},
+                       {name:"科技生活奖5名",count:5,id:7},
+                       {name:"品质生活奖5名",count:5,id:8},
+                       {name:"关爱生命奖20名",count:20,id:9}
+                    
                 ]
             },
             mounted () {
