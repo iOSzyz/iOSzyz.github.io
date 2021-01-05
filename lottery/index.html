@@ -147,7 +147,7 @@
 <div id="tools" class="tools">
      <button
         v-for="value in btns"
-        @click="onClick(value.count)"
+        @click="onClick(value.id,value.num)"
         class="pure-button"
         :class="{ 'button-error': selected == value.id}"
        >{{value.name}}</button>
@@ -216,7 +216,8 @@
         new Vue({
             el: '#tools',
             data: {
-                selected: 30,
+                selected: 1,
+                selectCount:0,
                 running: false,
                 btns: [{name:"出差无忧奖5名\n小米移动电源10000毫安",count:5,id:1},
                        {name:"纯爷们儿奖5名",count:5,id:2},
@@ -246,15 +247,16 @@
                         location.reload(true);
                     }
                 },
-                onClick: function(num){
+                onClick: function(id,num){
                     $('#result').css('display', 'none');
                     $('#main').removeClass('mask');
-                    this.selected = num;
+                    this.selected = id;
+                    this.selectCount = num;
                 },
                 toggle: function(){
                     if(this.running){
                         TagCanvas.SetSpeed('myCanvas', speed());
-                        var ret = lottery(this.selected);
+                        var ret = lottery(this.selectCount);
                         if (ret.length === 0) {
                             $('#result').css('display', 'block').html('<span>已抽完</span>');
                             return
