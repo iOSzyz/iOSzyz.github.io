@@ -110,9 +110,18 @@
         }
         .tools {
             position: absolute;
-            bottom: 20px;
-            right: 20px;
+            top: 20px;
+            left: 20px;
             text-align: center;
+            display: block;
+            width: 200px;
+            height: 600px;
+        }
+        .prizebutton{
+            margin: 5px;
+            padding: 5px;
+            width: 180px;
+            height: 60px;
         }
         .tools .pure-button {
             display: inline-block;
@@ -145,9 +154,9 @@
 <div id="result" class="result">
 </div>
 <div id="tools" class="tools">
-     <button
+     <button class="prizebutton"
         v-for="value in btns"
-        @click="onClick(value.id,value.num)"
+        @click="onClick(value.id,value.count)"
         class="pure-button"
         :class="{ 'button-error': selected == value.id}"
        >{{value.name}}</button>
@@ -183,7 +192,7 @@
             html.push('</ul>');
             return html.join('');
         };
-        var lottery = function(count){
+        var lottery = function(count,data,idNumber){
             var list = canvas.getElementsByTagName('a');
             var color = 'yellow';
             var ret = member
@@ -206,6 +215,18 @@
                   return m.name + '<br/>' + m.phone; 
                 });
             localStorage.setItem('choosed', JSON.stringify(choosed));
+            var obj = data[idNumber];
+            var dataObj = {"prizeName":obj.name,"prize":ret,"id":idNumber};
+            var historyData = [];
+            if(localStorage.getItem('prized') != null){
+                var temStr = localStorage.getItem('prized');
+                var temArr = JSON.parse(temStr);
+                for(var i=0; i<temArr.length; i++){
+                    historyData.push(temArr[i])
+                }
+            }
+            historyData.push(dataObj);
+            localStorage.setItem('prized',JSON.stringify(historyData));
             return ret;
         };
         var canvas = document.createElement('canvas');
@@ -217,17 +238,18 @@
             el: '#tools',
             data: {
                 selected: 1,
-                selectCount:0,
+                selectCount:5,
+                selectArr:[],
                 running: false,
                 btns: [{name:"出差无忧奖5名\n小米移动电源10000毫安",count:5,id:1},
-                       {name:"纯爷们儿奖5名",count:5,id:2},
-                       {name:"汇报必备奖5名",count:5,id:3},
-                       {name:"办公无忧奖5名",count:5,id:4},
-                       {name:"冬日居家奖5名",count:5,id:5},
-                       {name:"智能安全奖5名",count:5,id:6},
-                       {name:"科技生活奖5名",count:5,id:7},
-                       {name:"品质生活奖5名",count:5,id:8},
-                       {name:"关爱生命奖20名",count:20,id:9}
+                       {name:"纯爷们儿奖5名\n小米米家电动剃须刀",count:5,id:2},
+                       {name:"汇报必备奖5名\n小米无线鼠标2",count:5,id:3},
+                       {name:"办公无忧奖5名\n小米米家插座USB（无线版）",count:5,id:4},
+                       {name:"冬日居家奖5名\n小米米家电子温湿度计2",count:5,id:5},
+                       {name:"智能安全奖5名\n小米智能可视门铃2",count:5,id:6},
+                       {name:"科技生活奖5名\n米家空调伴侣2",count:5,id:7},
+                       {name:"品质生活奖5名\n米家自动洗手机",count:5,id:8},
+                       {name:"关爱生命奖20名\n医用外科口罩",count:20,id:9}
                     
                 ]
             },
@@ -254,9 +276,14 @@
                     this.selectCount = num;
                 },
                 toggle: function(){
+                    if(this.selectArr.indexOf(this.selected) > -1){
+                        alert("抽过此奖品")
+                        return;   
+                    }
                     if(this.running){
                         TagCanvas.SetSpeed('myCanvas', speed());
-                        var ret = lottery(this.selectCount);
+                        this.selectArr.push(this.selected);
+                        var ret = lottery(this.selectCount,this.btns,this.selected);
                         if (ret.length === 0) {
                             $('#result').css('display', 'block').html('<span>已抽完</span>');
                             return

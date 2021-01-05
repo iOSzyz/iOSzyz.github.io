@@ -66,22 +66,33 @@
             let vm = this
             let locals = window.localStorage
             let str_results = []
+            // let resResult = []
             // 遍历(排除choosed)
-            for(let i = 0; i<localStorage.length; i++){
-                if (localStorage.key(i) !== 'choosed') {
-                    str_results.push(localStorage.getItem(localStorage.key(i)))
-                }
-            }
+            // for(let i = 0; i<localStorage.length; i++){
+            //     // if (localStorage.key(i) !== 'choosed') {
+            //     //     str_results.push(localStorage.getItem(localStorage.key(i)))
+            //     // }
+            //     if (localStorage.key(i) == 'prized') {
+            //         resResult.push(localStorage.getItem(localStorage.key(i)))
+            //     }
+            // }
             // 分割每个string, 并将</br>换成空格
             let results = []
-            for(let nameList of str_results) {
-                let temp = JSON.parse(nameList)
-                temp = temp.map(item => {return item.replace('<br/>', ' ')})
-                results.push(temp)
+            
+            let resResult = localStorage.getItem('prized');
+            let resResultArr = JSON.parse(resResult);
+
+            for(let obj of resResultArr) {
+                let nameList = obj.prize;
+                nameList = nameList.map(item => {return item.replace('<br/>', ' ')})
+                let name = [];
+                name.push(obj.prizeName);
+                results.push(name);
+                results.push(nameList)
             }
             
             // 根据长度进行排序，名单短的放在前面
-            results = results.sort((x, y) => { return x.length - y.length;})
+            // results = results.sort((x, y) => { return x.length - y.length;})
             this.results = results
         },
     })
