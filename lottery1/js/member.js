@@ -1,7 +1,6 @@
 var member=[
 {"phone":"No.1","name":"张雷明"},
 {"phone":"No.2","name":"于树雷"},
-{"phone":"No.3","name":"冉海燕"},
 {"phone":"No.4","name":"安晨阳"},
 {"phone":"No.5","name":"陈超"},
 {"phone":"No.6","name":"陈二伟"},

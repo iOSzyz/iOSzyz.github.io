@@ -173,8 +173,8 @@
 <script type="text/javascript" src="js/member.js"></script>
 <script type="text/javascript">
     (function(){
-        var choosed = JSON.parse(localStorage.getItem('choosed')) || {};
-        console.log(choosed);
+        var choosed1 = JSON.parse(localStorage.getItem('choosed1')) || {};
+        console.log(choosed1);
         var speed = function(){
             return [0.1 * Math.random() + 0.01, -(0.1 * Math.random() + 0.01)];
         };
@@ -186,7 +186,7 @@
             member.forEach(function(item, index){
                 item.index = index;
                 var key = getKey(item);
-                var color = choosed[key] ? 'yellow' : 'white';
+                var color = choosed1[key] ? 'yellow' : 'white';
                 html.push('<li><a href="#" style="color: ' + color + ';">' + item.name + '</a></li>');
             });
             html.push('</ul>');
@@ -199,7 +199,7 @@
             var ret = member
                 .filter(function(m, index){
                     m.index = index;
-                    return !choosed[getKey(m)];
+                    return !choosed1[getKey(m)];
                 })
                 .map(function(m){
                     return Object.assign({
@@ -211,11 +211,11 @@
                 })
                 .slice(0, count)
                 .map(function(m){
-                  choosed[getKey(m)] = 1;
+                  choosed1[getKey(m)] = 1;
                   list[m.index].style.color = color;
                   return m.name + '<br/>' + "(" +obj.prize + ")"; 
                 });
-            localStorage.setItem('choosed', JSON.stringify(choosed));
+            localStorage.setItem('choosed1', JSON.stringify(choosed1));
             
             var dataObj = {"prizeName":obj.name,"prize":ret,"id":idNumber};
             var historyData = [];
@@ -239,18 +239,14 @@
             el: '#tools',
             data: {
                 selected: 1,
-                selectCount:6,
+                selectCount:15,
                 selectArr:[],
                 running: false,
-                btns: [{name:"出差无忧奖",count:6,id:1,prize:"小米移动电源10000毫安"},
-                       {name:"纯爷们儿奖",count:10,id:2,prize:"小米米家电动剃须刀S300"},
-                       {name:"爱啥啥啥奖",count:6,id:3,prize:"小米金属随身音响"},
-                       {name:"办公无忧奖",count:6,id:4,prize:"小米香氛机"},
-                       {name:"冬日居家奖",count:7,id:5,prize:"小米蓝牙温湿度计2"},
-                       {name:"宠妻狂魔奖",count:3,id:6,prize:"小米吹风机H300"},
-                       {name:"科技生活奖",count:6,id:7,prize:"米家空调伴侣2"},
-                       {name:"品质生活奖",count:6,id:8,prize:"米家自动洗手机"},
-                       {name:"音乐达人奖",count:6,id:9,prize:"小米单动圈耳机"}
+                btns: [{name:"阳光普照奖1",count:15,id:1,prize:"小爱音箱PLAY"},
+                       {name:"阳光普照奖2",count:10,id:2,prize:"小米体脂称2"},
+                       {name:"阳光普照奖3",count:10,id:3,prize:"小米电动牙刷T300"},
+                       {name:"阳光普照奖4",count:10,id:4,prize:"Redmi AirDots2"},
+                       {name:"阳光普照奖5",count:10,id:5,prize:"米家电水壶"}
                 ]
             },
             mounted () {
